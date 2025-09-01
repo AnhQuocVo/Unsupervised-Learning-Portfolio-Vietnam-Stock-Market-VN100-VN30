@@ -77,6 +77,7 @@ s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
 $$
 
 **Garman-Klass Volatility**
+
 $$
 \text{GK Volatility} =
 \frac{(\ln(\text{High}) - \ln(\text{Low}))^2}{2}
