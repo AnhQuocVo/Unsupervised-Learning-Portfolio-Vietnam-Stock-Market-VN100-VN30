@@ -18,7 +18,7 @@ This project applies Unsupervised Learning techniques to analyze the Vietnam sto
 ### 2. Data Preprocessing
 
 * **Cleaning**: Remove missing values, filter stocks with sufficient history
-* **Aggregation**: Convert daily to monthly frequency, filter top 150 most liquid stocks
+* **Aggregation**: Convert daily to monthly frequency, filter most liquid stocks
 * **Feature Engineering**: Compute rolling returns, technical indicators, factor betas
 * **Normalization**: Standardize features for clustering
 
