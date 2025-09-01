@@ -79,10 +79,7 @@ $$
 **Garman-Klass Volatility**
 
 $$
-\text{GK Volatility} =
-\frac{(\ln(\text{High}) - \ln(\text{Low}))^2}{2}
--
-(2\ln(2) - 1)(\ln(\text{Adj Close}) - \ln(\text{Open}))^2
+GK-Volatility = ((ln(High) - ln(Low))^2)/2 - (2ln(2)-1)(ln(AdjClose) - ln(Open))^2
 $$
 
 ---
