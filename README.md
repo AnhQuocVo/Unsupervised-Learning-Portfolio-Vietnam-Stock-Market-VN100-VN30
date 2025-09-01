@@ -1,26 +1,18 @@
-Dựa trên nội dung bạn cung cấp, tôi sẽ viết lại file **README.md** hoàn chỉnh theo phong cách **professional, súc tích, không icon, không màu mè**, đúng chuẩn cho một project nghiên cứu.
-
----
-
-# Unsupervised Learning Portfolio: Vietnam Stock Market (VN100)
+# Unsupervised Learning Portfolio: Vietnam Stock Market (VN100&VN30)
 
 ## Introduction
-
 This project applies Unsupervised Learning techniques to analyze the Vietnam stock market (VN100). The objective is to cluster stocks, uncover hidden patterns, and support data-driven investment decisions. By grouping stocks with similar characteristics, investors can identify outperforming clusters, diversify portfolios, and enhance risk management.
-
 ### Significance
-
 * Discover latent structures in the VN100 universe
 * Support systematic portfolio construction
 * Enable quantitative insights for investment strategies
 
----
 
 ## Project Workflow
 
 ### 1. Data Collection
 
-* **Sources**: TradingView (VN100 components), Yahoo Finance (historical data), Fama-French Factors (via `pandas_datareader`)
+* **Sources**: TradingView (VN100&VN30 components), Yahoo Finance (historical data), Fama-French Factors (via `pandas_datareader`)
 * **Features Used**: Price, volume, RSI, Bollinger Bands, ATR, MACD, dollar volume (liquidity proxy), rolling returns, Fama-French factor exposures
 
 ### 2. Data Preprocessing
@@ -84,49 +76,22 @@ $$
 s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
 $$
 
+**Garman-Klass Volatility**
+$$
+\text{GK Volatility} =
+\frac{(\ln(\text{High}) - \ln(\text{Low}))^2}{2}
+-
+(2\ln(2) - 1)(\ln(\text{Adj Close}) - \ln(\text{Open}))^2
+$$
+
 ---
 
 ## Results
+![VN100](assets/image.png)
+![VN30](assets/image-1.png)
 
 ### Key Findings
 
 * **Clusters Identified**: 4 distinct groups based on technical and fundamental features
 * **Momentum Cluster**: High-RSI stocks (\~70) demonstrated persistent outperformance
 * **Portfolio Performance**: Unsupervised strategy outperformed VN100 Buy & Hold in backtesting
-
-### Visualization Highlights
-
-| Cluster | Avg RSI | Avg Return | Liquidity | Factor Exposure |
-| ------- | ------- | ---------- | --------- | --------------- |
-| 0       | 30      | Low        | High      | Defensive       |
-| 1       | 45      | Moderate   | Moderate  | Balanced        |
-| 2       | 55      | Moderate   | Moderate  | Value           |
-| 3       | 70      | High       | High      | Momentum        |
-
----
-
-## Usage
-
-Clone the repository and run the notebook to reproduce results. Ensure required dependencies are installed.
-
----
-
-## References
-
-* PyPortfolioOpt
-* scikit-learn
-* Yahoo Finance
-* Fama-French Data Library
-*
-
-## Contact
-
-For questions or collaboration, please open an issue or contact the repository owner.
-
-
-## Disclaimer
-
-This project is for educational and research purposes only. Past performance does not guarantee future results. Invest responsibly.
-
-
-Bạn có muốn tôi viết thêm **Installation & Requirements** (Python version, thư viện `requirements.txt`) để README này có thể dùng luôn cho GitHub repo không?
