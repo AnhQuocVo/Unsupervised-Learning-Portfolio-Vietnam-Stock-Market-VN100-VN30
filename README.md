@@ -40,56 +40,6 @@ This project applies Unsupervised Learning techniques to analyze the Vietnam sto
 
 ---
 
-## Mathematical Formulas
-
-**Normalization (Z-score)**
-
-$$
-z = \frac{x - \mu}{\sigma}
-$$
-
-**Min-Max Scaling**
-
-$$
-x' = \frac{x - x_{min}}{x_{max} - x_{min}}
-$$
-
-**Euclidean Distance (K-Means)**
-
-$$
-d(x, y) = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}
-$$
-
-**Principal Component Analysis (PCA)**
-
-$$
-C = \frac{1}{n-1} (X - \bar{X})^T (X - \bar{X})
-$$
-
-$$
-C v = \lambda v
-$$
-
-**Silhouette Score**
-
-$$
-s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
-$$
-
-**Garman-Klass Volatility**
-
-$$
-GK-Volatility = ((ln(High) - ln(Low))^2)/2 - (2ln(2)-1)(ln(AdjClose) - ln(Open))^2
-$$
-
----
-
 ## Results
 ![VN100](assets/image.png)
 ![VN30](assets/image-1.png)
-
-### Key Findings
-
-* **Clusters Identified**: 4 distinct groups based on technical and fundamental features
-* **Momentum Cluster**: High-RSI stocks (>= 70) demonstrated persistent outperformance
-* **Portfolio Performance**: Unsupervised strategy outperformed VN100 Buy & Hold in backtesting
