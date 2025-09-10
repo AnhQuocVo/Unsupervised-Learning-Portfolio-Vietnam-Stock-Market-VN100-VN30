@@ -1,7 +1,7 @@
 # Unsupervised Learning Portfolio: Vietnam Stock Market (VN100&VN30)
 
 ## Introduction
-This project applies Unsupervised Learning techniques to analyze the Vietnam stock market (VN100). The objective is to cluster stocks, uncover hidden patterns, and support data-driven investment decisions. By grouping stocks with similar characteristics, investors can identify outperforming clusters, diversify portfolios, and enhance risk management.
+This project applies Unsupervised Learning techniques to analyze the Vietnam stock market (VN100 & VN30). The objective is to cluster stocks, uncover hidden patterns, and support data-driven investment decisions. By grouping stocks with similar characteristics, investors can identify outperforming clusters, diversify portfolios, and enhance risk management.
 ### Significance
 * Discover latent structures in the VN100 universe
 * Support systematic portfolio construction
@@ -24,13 +24,13 @@ This project applies Unsupervised Learning techniques to analyze the Vietnam sto
 
 ### 3. Model Application
 
-* **Clustering Algorithms**: K-Means (custom centroids based on RSI), Hierarchical Clustering (optional), PCA for dimensionality reduction
-* **Portfolio Construction**: Select high-momentum clusters (e.g., RSI \~70), optimize weights using Efficient Frontier (PyPortfolioOpt)
+* **Clustering Algorithms**: K-Means (custom centroids based on RSI)
+* **Portfolio Construction**: Select high-momentum clusters (RSI >= 70), optimize weights using Efficient Frontier (PyPortfolioOpt)
 
 ### 4. Model Evaluation
 
 * **Metrics**: Silhouette Score for cluster quality
-* **Visualization**: Cluster scatter plots (RSI vs. returns), portfolio cumulative returns vs. VN100 benchmark
+* **Visualization**: Cluster scatter plots (RSI vs. returns), portfolio cumulative returns vs. VN100/VN30 benchmark
 
 ### 5. Final Output
 
@@ -91,5 +91,5 @@ $$
 ### Key Findings
 
 * **Clusters Identified**: 4 distinct groups based on technical and fundamental features
-* **Momentum Cluster**: High-RSI stocks (\~70) demonstrated persistent outperformance
+* **Momentum Cluster**: High-RSI stocks (>= 70) demonstrated persistent outperformance
 * **Portfolio Performance**: Unsupervised strategy outperformed VN100 Buy & Hold in backtesting
