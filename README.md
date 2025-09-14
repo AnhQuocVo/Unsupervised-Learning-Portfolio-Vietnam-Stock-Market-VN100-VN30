@@ -1,45 +1,39 @@
-# Unsupervised Learning Portfolio: Vietnam Stock Market (VN100&VN30)
+# Unsupervised Learning Trading Strategy (VN100 & VN30)
 
-## Introduction
-This project applies Unsupervised Learning techniques to analyze the Vietnam stock market (VN100 & VN30). The objective is to cluster stocks, uncover hidden patterns, and support data-driven investment decisions. By grouping stocks with similar characteristics, investors can identify outperforming clusters, diversify portfolios, and enhance risk management.
-### Significance
-* Discover latent structures in the VN100 universe
-* Support systematic portfolio construction
-* Enable quantitative insights for investment strategies
+## 1. Project Overview
 
+This project explores algorithmic trading on Vietnam’s VN100 and VN30 indices using unsupervised learning.
 
-## Project Workflow
+It applies K-Means clustering to group similar stocks, then optimizes portfolios using Modern Portfolio Theory (MPT) for maximum Sharpe ratio.
 
-### 1. Data Collection
+The strategy is rebalanced monthly and benchmarked against the VN30 index to test whether a systematic, data-driven approach can outperform passive investing.
 
-* **Sources**: TradingView (VN100&VN30 components), Yahoo Finance (historical data), Fama-French Factors (via `pandas_datareader`)
-* **Features Used**: Price, volume, RSI, Bollinger Bands, ATR, MACD, dollar volume (liquidity proxy), rolling returns, Fama-French factor exposures
+## 2. Key Highlights
 
-### 2. Data Preprocessing
+- **Data Pipeline** – Collects and cleans historical price data (Yahoo Finance), adjusts for splits/dividends.
+- **Feature Engineering** – Computes volatility (Garman-Klass), RSI, Bollinger Bands, ATR, MACD, dollar volume, and monthly returns.
+- **Machine Learning** – Clusters stocks monthly via K-Means after normalization.
+- **Portfolio Optimization** – Allocates weights using MPT and performs monthly rebalancing.
+- **Backtest & Visualization** – Compares portfolio performance vs VN30, visualizes clusters and risk-adjusted returns.
 
-* **Cleaning**: Remove missing values, filter stocks with sufficient history
-* **Aggregation**: Convert daily to monthly frequency, filter most liquid stocks
-* **Feature Engineering**: Compute rolling returns, technical indicators, factor betas
-* **Normalization**: Standardize features for clustering
+## 3. Skills & Business Impact
 
-### 3. Model Application
+| Area | Tools Used | Value Delivered |
+| --- | --- | --- |
+| Data Analysis | Python, pandas, numpy | Clean and process VN100 & VN30 market data |
+| Machine Learning | scikit-learn (K-Means) | Group stocks into meaningful clusters automatically |
+| Portfolio Theory | PyPortfolioOpt | Optimize weights for maximum Sharpe ratio |
+| Visualization | matplotlib | Present portfolio allocation and performance clearly |
+| Research & Strategy | yfinance, statsmodels | Validate strategy viability in real markets |
 
-* **Clustering Algorithms**: K-Means (custom centroids based on RSI)
-* **Portfolio Construction**: Select high-momentum clusters (RSI >= 70), optimize weights using Efficient Frontier (PyPortfolioOpt)
+**Business Value:**
 
-### 4. Model Evaluation
+- Removes emotional bias in stock selection.
+- Creates reproducible, systematic investment strategy.
+- Scalable to other indices or global markets.
+- Demonstrates quant research, machine learning, and portfolio construction skills.
 
-* **Metrics**: Silhouette Score for cluster quality
-* **Visualization**: Cluster scatter plots (RSI vs. returns), portfolio cumulative returns vs. VN100/VN30 benchmark
-
-### 5. Final Output
-
-* **Clusters**: Number and characteristics (momentum, volatility, factor exposure)
-* **Insights**: Identification of outperforming clusters and diversification benefits
-* **Portfolio Performance**: Strategy returns compared to VN100 Buy & Hold
-
----
-
-## Results
+## 4. Result
 ![VN100](assets/image.png)
 ![VN30](assets/image-1.png)
+
